@@ -27,7 +27,7 @@
                     </a>
                     <p>Publié le <?= $article['publication_date']; ?></p>
                     <h4>Par <a href="http://localhost/blog/writer.php?id=<?= $article['id']; ?>"><?= $article['username']; ?></a></h4>
-                    <a href="http://localhost/blog/article.php?id=<?= $article['postid']; ?>"> <img class="home-post-img" src="http://localhost/projets/community_blog/uploads/<?= $article['image']; ?>"></a>
+                    <a href="http://localhost/blog/article.php?id=<?= $article['postid']; ?>"> <img class="home-post-img" src="http://localhost/blog/uploads/<?= $article['image']; ?>"></a>
                 </div>
             <?php endforeach; ?>
         </section>

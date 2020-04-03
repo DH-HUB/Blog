@@ -41,7 +41,7 @@ nav {
 
 .home-post, .published {
     width: 500px;
-    height: 400px;
+    height: 500px;
     background-color: rgb(245, 218, 215);
     border-radius: 8px;
     text-align: center;
@@ -51,6 +51,7 @@ nav {
 
 .home-post img {
     width: 400px;
+    height: 300px;
 }
 
 main h2 {
