@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $theArticle['title']; ?></title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+<?php
+    if (!empty($_SESSION)) {
+        include('nav_logged.phtml');
+    } else {
+        include('nav.phtml');
+    }
+    ?>
+    <div id="container-post">
+        <h1><?php echo $theArticle['title']; ?></h1><br>
+        <p>par <a href="http://localhost/blog/writer.php?id=<?= $theArticle['writerid']; ?>"><?= $theArticle['username']; ?></a><br>
+            <img src="http://localhost/blog/uploads/<?= $theArticle['image']; ?>">
+            <p><?= $theArticle['content']; ?></p>
+    </div>
+
+    <div id="container-add-comment">
+        <h2>Ajouter votre commentaire</h2>
+        <form action="article.php" method="post">
+            <input type='text' name="pseudo" placeholder="pseudo"><br><br>
+            <textarea rows="5" cols="30" type='text' name="commentaire" placeholder="votre commentaire"></textarea><br>
+            <input type="hidden" name="postidcomment" value="<?= $theArticle['postid']; ?>"><br>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+
+    <div id="comment-thread">
+        <h2>Commentaires</h2>
+        <?php foreach ($allComments as $key => $comment) : ?>
+            <p> Commentaire de : <?php echo $comment['username']; ?></p>
+            <p><?php echo $comment['content']; ?>
+            <?php endforeach; ?>
+    </div>
+
+    <?php  include('footer.phtml'); ?>
+   
+</body>
+
+</html>
