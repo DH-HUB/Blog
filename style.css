@@ -55,10 +55,10 @@ nav {
 }
 
 main h2 {
-    margin-left :  130px;
-    font-size: 3rem;
-    margin-top: 100px;
-    font-weight: 200;
+    margin-left : 130px;
+    font-size: 2.5rem;
+   
+    font-weight: 100;
 }
 
 #container-form-signup {
