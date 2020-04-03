@@ -25,7 +25,7 @@ $sth->bindValue(1, $_GET['idedit'], PDO::PARAM_INT);
 $sth->execute();
 $articleEdition = $sth->fetch();
 
-var_dump($articleEdition);
+//var_dump($articleEdition);
 
 
 if (!empty($_POST)) {
